@@ -44,7 +44,7 @@ export function StoreEditorial() {
           className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6"
           style={{ x }}
         >
-          {gallery.map((item, index) => (
+          {gallery.map((item) => (
             <article
               data-gsap="mask"
               className="image-mask distort-card group relative min-h-[40vh] overflow-hidden rounded-[1.5rem] bg-ink p-4 text-cream shadow-soft md:min-h-[66vh] md:p-5"

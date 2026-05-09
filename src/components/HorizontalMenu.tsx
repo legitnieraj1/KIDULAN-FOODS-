@@ -9,7 +9,7 @@ import { burgerItems } from "@/data/site";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export function HorizontalMenu() {
-  const [selectedProduct, setSelectedProduct] = useState<any>(null);
+  const [selectedProduct, setSelectedProduct] = useState<typeof burgerItems[number] | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: 'left' | 'right') => {

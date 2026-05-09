@@ -152,7 +152,7 @@ export function Header() {
 
                   <div className="mx-auto w-full max-w-[1800px] px-5 pb-20 md:px-10">
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
-                      {categories.map((cat, i) => (
+                      {categories.map((cat) => (
                         <a 
                           href="#shop" 
                           key={cat.name} 
@@ -279,8 +279,8 @@ export function Header() {
                   {items.length === 0 ? (
                     <div className="flex h-full flex-col items-center justify-center text-center opacity-60">
                       <ShoppingCart className="mb-4 size-14 text-ink/30" strokeWidth={1} />
-                      <p className="headline text-3xl text-ink">It's empty.</p>
-                      <p className="mt-3 text-sm font-semibold text-ink/70">Looks like you haven't added any grains yet.</p>
+                      <p className="headline text-3xl text-ink">It&apos;s empty.</p>
+                      <p className="mt-3 text-sm font-semibold text-ink/70">Looks like you haven&apos;t added any grains yet.</p>
                     </div>
                   ) : (
                     <div className="flex flex-col gap-5">
