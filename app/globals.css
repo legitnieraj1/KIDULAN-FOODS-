@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Roc Grotesk";
+  src: url("/images/roc-grotesk-black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Things To Remember";
+  src: url("/images/Things To Remember Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-grotesk: "Roc Grotesk", "Integral CF", "Arial Black", Impact, sans-serif;
+  --font-body: "Avenir Next", "Avenir", "Inter", Arial, sans-serif;
+  --font-display: "Things To Remember", "Georgia", "Times New Roman", serif;
+  --cream: #e6dcc7;
+  --ink: #21160e;
+  --butter: #d69b3e;
+  --coral: #c85a45;
+  --salt: #f2e9d9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+  background: var(--cream);
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(250, 203, 72, 0.18), transparent 28vw),
+    linear-gradient(180deg, #f4f0df 0%, #f7f1dc 46%, #eee6cf 100%);
+  color: var(--ink);
+  font-family: var(--font-body);
+  text-rendering: geometricPrecision;
+}
+
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--butter);
+  color: var(--ink);
+}
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 100;
+  transform: translateY(-150%);
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--cream);
+  padding: 0.75rem 1rem;
+  font-weight: 900;
+  transition: transform 200ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.font-outline {
+  color: transparent;
+  -webkit-text-stroke: clamp(1px, 0.16vw, 3px) currentColor;
+}
+
+.headline {
+  font-family: var(--font-grotesk);
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 0.85;
+  text-transform: uppercase;
+}
+
+.display-script {
+  font-family: var(--font-display);
+  font-style: italic;
+  letter-spacing: 0;
+}
+
+.image-mask {
+  clip-path: inset(0 0 0 0 round 1.35rem);
+  transform-origin: center;
+}
+
+.distort-card {
+  isolation: isolate;
+}
+
+
+
+.magnet {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.menu-grid {
+  grid-template-columns: repeat(9, minmax(22rem, 34vw));
+}
+
+.footer-reveal {
+  view-timeline-name: --footer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
