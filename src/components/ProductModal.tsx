@@ -30,23 +30,13 @@ export function ProductModal({ product, onClose }: { product: Product | null; on
     setAdded(false);
   }, [product?.name]);
 
-  // Lock body scroll, pause Lenis, handle wheel
+  // Lock body scroll and pause Lenis
   useEffect(() => {
     if (!product) return;
     document.body.style.overflow = "hidden";
     window.__lenis?.stop();
 
-    const el = scrollRef.current;
-    if (!el) return;
-
-    const onWheel = (e: WheelEvent) => {
-      e.stopPropagation();
-      el.scrollTop += e.deltaY;
-    };
-    el.addEventListener("wheel", onWheel, { passive: true, capture: true });
-
     return () => {
-      el.removeEventListener("wheel", onWheel, { capture: true });
       document.body.style.overflow = "";
       window.__lenis?.start();
     };
@@ -77,6 +67,9 @@ export function ProductModal({ product, onClose }: { product: Product | null; on
       exit={{ opacity: 0 }}
       className="fixed inset-0 z-[100] overflow-y-auto bg-ink/80 px-4 py-6 backdrop-blur-sm md:px-8 md:py-10"
       onClick={onClose}
+      onWheel={(e) => e.stopPropagation()}
+      onTouchMove={(e) => e.stopPropagation()}
+      data-lenis-prevent="true"
     >
       <motion.div
         initial={{ y: 50, scale: 0.95 }}
