@@ -64,29 +64,29 @@ export function Locations() {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid grid-cols-2 gap-4 md:gap-6 md:grid-cols-2 xl:grid-cols-3">
           {benefits.map((feature) => (
             <article
               key={feature.num}
               data-gsap="reveal"
-              className="flex flex-col justify-between rounded-[1.5rem] bg-cream p-6 shadow-soft md:p-8"
+              className="flex flex-col justify-between rounded-[1.5rem] bg-cream p-4 shadow-soft md:p-8"
             >
               <div>
-                <div className="mb-6 flex size-12 items-center justify-center rounded-full bg-ink font-grotesk text-sm font-black text-cream">
+                <div className="mb-4 flex size-8 md:mb-6 md:size-12 items-center justify-center rounded-full bg-ink font-grotesk text-xs md:text-sm font-black text-cream">
                   {feature.num}
                 </div>
-                <h3 className="headline text-[2.5rem] leading-[0.9] md:text-[3rem]">
+                <h3 className="headline text-[1.5rem] md:text-[3rem] leading-[0.9]">
                   {feature.title}
                 </h3>
-                <p className="mt-4 text-base font-semibold leading-relaxed text-ink/80">
+                <p className="mt-3 md:mt-4 text-[11px] md:text-base font-semibold leading-relaxed text-ink/80">
                   {feature.desc}
                 </p>
               </div>
-              <div className="mt-8 border-t border-ink/10 pt-5">
-                <p className="font-grotesk text-xs font-black uppercase tracking-widest text-coral">
+              <div className="mt-4 md:mt-8 border-t border-ink/10 pt-3 md:pt-5">
+                <p className="font-grotesk text-[9px] md:text-xs font-black uppercase tracking-widest text-coral">
                   Stat
                 </p>
-                <p className="mt-2 text-xl font-bold leading-tight">
+                <p className="mt-1 md:mt-2 text-sm md:text-xl font-bold leading-tight">
                   {feature.stat}
                 </p>
               </div>
