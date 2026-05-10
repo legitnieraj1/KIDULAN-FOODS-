@@ -23,12 +23,12 @@ export function ClientShell({ children }: ClientShellProps) {
     }
 
     const lenis = new Lenis({
-      duration: 1.2,
+      duration: 1.0,
       easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
-      syncTouch: false,
-      touchMultiplier: 1.5,
-      wheelMultiplier: 1.0,
+      syncTouch: true,
+      touchMultiplier: 1.4,
+      wheelMultiplier: 0.82,
     });
 
     window.__lenis = lenis;
