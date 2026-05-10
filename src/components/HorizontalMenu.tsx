@@ -49,7 +49,7 @@ export function HorizontalMenu() {
 
         <div 
           ref={scrollRef}
-          className="no-scrollbar flex w-full snap-x snap-mandatory gap-8 overflow-x-auto pb-10 md:gap-12 [touch-action:pan-x]"
+          className="no-scrollbar flex w-full snap-x snap-proximity gap-8 overflow-x-auto pb-10 md:gap-12 [touch-action:pan-x] overscroll-x-contain"
           data-lenis-prevent="true"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
