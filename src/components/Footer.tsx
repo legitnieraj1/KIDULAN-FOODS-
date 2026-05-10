@@ -5,18 +5,18 @@ import { navItems } from "@/data/site";
 
 export function Footer() {
   return (
-    <footer className="footer-reveal flex min-h-[100svh] flex-col overflow-y-auto md:overflow-hidden md:h-[100svh] bg-ink px-5 pb-6 pt-24 text-cream md:px-12 md:pb-8 md:pt-32">
+    <footer className="footer-reveal flex h-[100svh] flex-col overflow-hidden bg-ink px-5 pb-6 pt-10 text-cream md:px-12 md:pb-8 md:pt-32">
       <div className="mx-auto flex w-full max-w-[1600px] grow flex-col justify-between">
 
-        <div className="grid h-full grow grid-cols-1 items-end md:grid-cols-[1.3fr_1fr] lg:grid-cols-[1.5fr_1fr]">
+        <div className="grid h-full grow grid-cols-1 md:items-end md:gap-0 md:h-full md:grid-cols-[1.3fr_1fr] lg:grid-cols-[1.5fr_1fr]">
 
           {/* Big Typography Left */}
-          <div className="flex h-full flex-col justify-end pb-12">
+          <div className="flex h-full flex-col justify-end pb-8 md:pb-12">
             <div className="mt-auto">
-              <p className="display-script mb-2 pl-2 text-[3.5rem] leading-none text-butter md:mb-4 md:pl-4 md:text-[5.5rem] lg:text-[6.5rem]">
+              <p className="display-script mb-1 pl-2 text-[2rem] leading-none text-butter md:mb-4 md:pl-4 md:text-[5.5rem] lg:text-[6.5rem]">
                 pure and natural
               </p>
-              <h2 className="headline text-[26vw] leading-[0.78] tracking-tighter text-cream md:text-[18vw] lg:text-[15vw]">
+              <h2 className="headline text-[16vw] leading-[0.78] tracking-tighter text-cream md:text-[18vw] lg:text-[15vw]">
                 <span className="block">KIDULAN™</span>
                 <span className="block">FOODS</span>
               </h2>
@@ -24,7 +24,7 @@ export function Footer() {
           </div>
 
           {/* Navigation & Contact Right */}
-          <div className="relative flex h-full flex-col justify-end pb-16 pl-4 md:pl-12">
+          <div className="relative flex h-full flex-col justify-end pb-10 pl-2 md:pl-12 md:pb-16">
 
             {/* Pineapple Decoration */}
             <div className="pointer-events-none absolute bottom-0 left-[-6rem] hidden w-[150px] opacity-100 md:block lg:bottom-[-2rem] lg:left-[-16rem] lg:w-[250px] xl:w-[300px] xl:left-[-20rem] z-10">
@@ -37,10 +37,10 @@ export function Footer() {
               />
             </div>
 
-            <div className="flex flex-col gap-12 sm:flex-row sm:gap-20">
+            <div className="flex flex-col gap-6 sm:flex-row sm:gap-20">
 
               {/* Nav Links & Text */}
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-4">
                 <p className="max-w-xs text-sm font-semibold leading-relaxed text-cream/80 md:text-base">
                   Bringing ancient grains back to modern tables. Pure, unadulterated, and crafted for your everyday well-being.
                 </p>
@@ -58,7 +58,7 @@ export function Footer() {
               </div>
 
               {/* Contacts */}
-              <div className="flex flex-col gap-5 text-sm font-semibold text-cream md:text-base">
+              <div className="flex flex-col gap-3 text-sm font-semibold text-cream md:gap-5 md:text-base">
                 <div className="flex items-center gap-4">
                   <MapPin className="size-5 text-butter" />
                   <span>Chennai, Tamil Nadu</span>
@@ -76,7 +76,7 @@ export function Footer() {
                   <a href="https://instagram.com/kidulanfoods" className="hover:text-butter">@kidulanfoods</a>
                 </div>
 
-                <MagneticButton href="#shop" variant="yellow" className="mt-4 w-fit px-8 py-3 text-sm">
+                <MagneticButton href="#shop" variant="yellow" className="mt-2 w-fit px-8 py-3 text-sm md:mt-4">
                   Shop Now
                 </MagneticButton>
               </div>

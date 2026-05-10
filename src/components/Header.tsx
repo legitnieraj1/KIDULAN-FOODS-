@@ -135,7 +135,7 @@ export function Header() {
             exit={{ clipPath: "circle(0% at 92% 8%)" }}
             transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
           >
-            <div className="h-[100dvh] w-full overflow-y-auto">
+            <div className="absolute inset-0 overflow-y-auto overscroll-contain [touch-action:pan-y]" data-lenis-prevent="true">
               <AnimatePresence mode="wait">
                 {categoryView ? (
                   <motion.div
