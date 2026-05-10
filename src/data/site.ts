@@ -52,9 +52,9 @@ export const storyImages: ImageAsset[] = [
 
 export const burgerItems = [
   {
-    name: "Lean Vita",
-    description: "Premium health supplement blend with natural herbs and vitamins. Supports weight management & vitality.",
-    src: "/images/product5.webp",
+    name: "Honey Muesli",
+    description: "A crunchy blend of rolled oats, honey-roasted nuts, and sun-dried fruits.",
+    src: "/images/honeymuslie.webp",
     accent: ""
   },
   {
@@ -82,9 +82,9 @@ export const burgerItems = [
     accent: ""
   },
   {
-    name: "Honey Muesli",
-    description: "A crunchy blend of rolled oats, honey-roasted nuts, and sun-dried fruits.",
-    src: "/images/honeymuslie.webp",
+    name: "Lean Vita",
+    description: "Premium health supplement blend with natural herbs and vitamins. Supports weight management & vitality.",
+    src: "/images/product5.webp",
     accent: ""
   }
 ];
