@@ -73,7 +73,7 @@ export function Footer() {
                 </div>
                 <div className="flex items-center gap-4">
                   <Instagram className="size-5 text-butter" />
-                  <a href="https://instagram.com/kidulanfoods" className="hover:text-butter">@kidulanfoods</a>
+                  <a href="https://www.instagram.com/kidulanfoods_india/" target="_blank" rel="noopener noreferrer" className="hover:text-butter">@kidulanfoods_india</a>
                 </div>
 
                 <MagneticButton href="#shop" variant="yellow" className="mt-2 w-fit px-8 py-3 text-sm md:mt-4">

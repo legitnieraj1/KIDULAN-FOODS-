@@ -242,7 +242,7 @@ export function Header() {
 
                   <div className="flex flex-wrap items-end justify-between gap-4 border-t border-cream/16 pt-5 text-sm font-black uppercase text-cream/62">
                     <span>KIDULAN™ FOODS · India</span>
-                    <span>@kidulanfoods</span>
+                    <a href="https://www.instagram.com/kidulanfoods_india/" target="_blank" rel="noopener noreferrer" className="hover:text-cream transition-colors">@kidulanfoods_india</a>
                     <span>hello@kidulanfoods.in</span>
                   </div>
                 </motion.div>

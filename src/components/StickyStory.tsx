@@ -31,14 +31,24 @@ export function StickyStory() {
             ancient grains. From power-packed ragi to wholesome muesli and
             nutrient-dense millets — every packet carries purpose.
           </p>
+          <a
+            href="#shop"
+            className="mt-8 inline-flex w-fit items-center justify-center rounded-[10px] bg-butter px-[36px] py-[14px] font-grotesk text-sm font-black uppercase tracking-wide text-ink transition-all duration-300 hover:scale-105 hover:brightness-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-butter"
+          >
+            Shop Now
+          </a>
           <motion.div
             className="mt-16 flex justify-center w-full"
             style={{ rotate: -8 }}
-            aria-hidden="true"
           >
-            <p className="display-script text-coral text-[3.5rem] md:text-[5.5rem] lg:text-[7rem] whitespace-nowrap">
+            <a 
+              href="https://www.instagram.com/kidulanfoods_india/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="display-script text-coral text-[3.5rem] md:text-[5.5rem] lg:text-[7rem] whitespace-nowrap transition-transform hover:scale-105"
+            >
               @KIDULAN FOODS
-            </p>
+            </a>
           </motion.div>
         </div>
 
