@@ -5,7 +5,7 @@ import { navItems } from "@/data/site";
 
 export function Footer() {
   return (
-    <footer className="footer-reveal flex h-[100svh] flex-col overflow-hidden bg-ink px-5 pb-6 pt-24 text-cream md:px-12 md:pb-8 md:pt-32">
+    <footer className="footer-reveal flex min-h-[100svh] flex-col overflow-y-auto md:overflow-hidden md:h-[100svh] bg-ink px-5 pb-6 pt-24 text-cream md:px-12 md:pb-8 md:pt-32">
       <div className="mx-auto flex w-full max-w-[1600px] grow flex-col justify-between">
 
         <div className="grid h-full grow grid-cols-1 items-end md:grid-cols-[1.3fr_1fr] lg:grid-cols-[1.5fr_1fr]">

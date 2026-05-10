@@ -38,6 +38,17 @@ export function Header() {
   }, [open]);
 
   useEffect(() => {
+    if (open || cartOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open, cartOpen]);
+
+  useEffect(() => {
     if (!open || !menuRef.current) return;
 
     const ctx = gsap.context(() => {
@@ -118,18 +129,19 @@ export function Header() {
         {open ? (
           <motion.div
             ref={menuRef}
-            className="fixed inset-0 z-40 overflow-y-auto bg-ink text-cream"
+            className="fixed inset-0 z-40 bg-ink text-cream"
             initial={{ clipPath: "circle(0% at 92% 8%)" }}
             animate={{ clipPath: "circle(145% at 92% 8%)" }}
             exit={{ clipPath: "circle(0% at 92% 8%)" }}
             transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
           >
-            <AnimatePresence mode="wait">
-              {categoryView ? (
-                <motion.div
-                  key="category-view"
-                  initial={{ opacity: 0, x: 40 }}
-                  animate={{ opacity: 1, x: 0 }}
+            <div className="h-[100dvh] w-full overflow-y-auto">
+              <AnimatePresence mode="wait">
+                {categoryView ? (
+                  <motion.div
+                    key="category-view"
+                    initial={{ opacity: 0, x: 40 }}
+                    animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -40 }}
                   transition={{ duration: 0.4, ease: "easeOut" }}
                   className="flex w-full flex-col min-h-screen pt-28 md:pt-36"
@@ -235,7 +247,8 @@ export function Header() {
                   </div>
                 </motion.div>
               )}
-            </AnimatePresence>
+              </AnimatePresence>
+            </div>
           </motion.div>
         ) : null}
       </AnimatePresence>
