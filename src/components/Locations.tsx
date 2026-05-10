@@ -64,7 +64,7 @@ export function Locations() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 xl:grid-cols-3">
+        <div className="grid grid-cols-2 gap-4 md:gap-6 md:grid-cols-2 xl:grid-cols-3">
           {benefits.map((feature) => (
             <article
               key={feature.num}
@@ -75,7 +75,7 @@ export function Locations() {
                 <div className="mb-4 flex size-8 md:mb-6 md:size-12 items-center justify-center rounded-full bg-ink font-grotesk text-xs md:text-sm font-black text-cream">
                   {feature.num}
                 </div>
-                <h3 className="headline text-[1.25rem] sm:text-[1.5rem] md:text-[3rem] leading-[0.9]">
+                <h3 className="headline break-words text-[1.25rem] md:text-[3rem] leading-[0.9]">
                   {feature.title}
                 </h3>
                 <p className="mt-3 md:mt-4 text-[11px] md:text-base font-semibold leading-relaxed text-ink/80">
